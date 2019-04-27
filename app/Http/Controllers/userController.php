@@ -44,7 +44,7 @@ class userController extends Controller
             $user->update();
             return new VideoResource(['token' => $token]);
         }else{
-            return new VideoResource(['failed'=>'Login Failed']);
+            return new VideoResource(['failed'=>'Login Failed. Check Token']);
         }
     }
 
@@ -64,7 +64,7 @@ class userController extends Controller
                 return new VideoResource($like);
             }
         }else{
-            return new VideoResource(['failed'=>'Login Failed']);
+            return new VideoResource(['failed'=>'Login Failed. Check Token']);
         }        
     }
 
@@ -81,7 +81,7 @@ class userController extends Controller
                 return new VideoResource($like);
             }
         }else{
-            return new VideoResource(['failed'=>'Login Failed']);
+            return new VideoResource(['failed'=>'Login Failed. Check Token']);
         }  
     }
 
@@ -100,7 +100,7 @@ class userController extends Controller
                 return new VideoResource($comments);
             }
         }else{
-            return new VideoResource(['failed'=>'Login Failed']);
+            return new VideoResource(['failed'=>'Login Failed. Check Token']);
         } 
     }
 }
